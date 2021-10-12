@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Amazon</title>
+        <style>
+            .dropdown {
+                position: relative;
+                display: inline-block;
+            }
+            .dropdown-content{
+                display: none;
+                position: absolute;
+                background-color: white;
+                min-width: 10px;
+                box-shadow: 0px 16px 8px 0px rgba(o,o,o,o.2);
+                padding: 12px 16px;
+            }
+            .dropdown:hover .dropdown-content{
+                display: block;
+            }
+            /*zoom code*/
+            .zoomA {
+  width: 100%px;
+  height: auto;
+  /* ease | ease-in | ease-out | linear */
+  transition: transform ease-in-out 0.3s;
+}
+.zoomA:hover {
+  transform: scale(1.2);
+}
+
+            /* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+        </style>
+    </head>
+    <body bgcolor="#F2F4F4">
+        <table border="0" height="30" width="100%" bgcolor="#090909" >
+            <tr>
+                <td align="right"><img src="C:/Users/HP/Desktop/project/logo3.jpg" size="60%"></td>
+                <td width="50%"><input type="text"placeholder="search for products,brands or more...." style="width:550px;height:35px;" onclick="myFunction()"class="dropdown" id="myInput" onkeyup="filterFunction">
+                    <input type="button" value="search" style="width: 85px;height:35px;"> </td>
+                <th><font color="white">Login & sign up</font></th>
+                <th><font color="white">Returns</br>&Orders </font></th>
+
+                <th><font color="white">More</font></th>
+                <th><img src="C:/Users/HP/Desktop/project/logo1.jpg"></th>
+            </tr>
+        </table>
+        <table border="0" width="100%" bgcolor="#90A5A9" height="9%">
+            <tr>
+            <th width="12">
+            <div class="dropdown">
+                <span>All</span>
+                <div class="dropdown-content">
+                    <p align="left">Mobiles</p>
+                    <p align="left">Eletronics</p>
+                    <p align="left">faction</p>
+                    <p align="left">Sports</p>
+                    <p align="left">TVs & Appliences</p>
+                    <p align="left">prime</p>
+
+
+                </div>
+            </div>
+            </th>
+            <th width="0">
+                <div class="dropdown">
+                    <span>Mobiles</span>
+                    <div class="dropdown-content">
+                        <p align="left">Real Me</p>
+                        <p align="left">iphone</p>
+                        <p align="left">NOKIA</p>
+                        <p align="left">Samsung</p>
+                        <p align="left">VIVO</p>
+                        <p align="left">Red Mi</p>
+                    </div>
+                </div>
+            </th>    
+                <th width="0">
+                    <div class="dropdown">
+                        <span>Eletronics</span>
+                        <div class="dropdown-content">
+                            <p align="left">freeze</p>
+                            <p align="left">mobiles</p>
+                            <p align="left">laptops</p>
+                            <p align="left">machines</p>
+                        </div>
+                    </div>
+                </th>
+                <th width="0">
+                    <div class="dropdown">
+                        <span>TVs&Appliances</span>
+                        <div class="dropdown-content">
+                            <p align="left">freeze</p>
+                            <p align="left">mobiles</p>
+                            <p align="left">laptops</p>
+                            <p align="left">machines</p>
+                        </div>
+                    </div>
+                </th>
+                <th width="0">
+                    <div class="dropdown">
+                <span>Fation</span>
+                <div class="dropdown-content">
+                    <p align="left">freeze</p>
+                    <p align="left">mobiles</p>
+                    <p align="left">laptops</p>
+                    <p align="left">machines</p>
+                </div>
+            </div>
+        </th>
+        <th width="0">
+            <div class="dropdown">
+                <span>amazon pay</span>
+                <div class="dropdown-content">
+                    <p align="left">freeze</p>
+                    <p align="left">mobiles</p>
+                    <p align="left">laptops</p>
+                    <p align="left">machines</p>
+                </div>
+            </div>
+        </th>
+        <th width="0">
+            <div class="dropdown">
+                <span>Sports</span>
+                <div class="dropdown-content">
+                    <p align="left">freeze</p>
+                    <p align="left">mobiles</p>
+                    <p align="left">laptops</p>
+                    <p align="left">machines</p>
+                </div>
+            </div>
+        </th>
+        <th width="0">
+            <div class="dropdown">
+                <span>computers</span>
+                <div class="dropdown-content">
+                    <p align="left">freeze</p>
+                    <p align="left">mobiles</p>
+                    <p align="left">laptops</p>
+                    <p align="left">machines</p>
+                </div>
+            </div>
+        </th>
+        <th width="0">
+            <div class="dropdown">
+                <span>prime</span>
+                <div class="dropdown-content">
+                    <p align="left">freeze</p>
+                    <p align="left">mobiles</p>
+                    <p align="left">laptops</p>
+                    <p align="left">machines</p>
+                </div>
+            </div>
+        </th>
+                
+            </tr>
+        </table>
+        <br>
+        <table align="center" border="0" width="100%" bgcolor="white" height="">
+
+        <div class="slideshow-container">
+
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides fade">
+              <div class="numbertext">1 / 3</div>
+              <img src="bn2.jpg" style="width:100%">
+              <div class="text">Caption Text</div>
+            </div>
+          
+            <div class="mySlides fade">
+              <div class="numbertext">2 / 3</div>
+              <img src="bn3.jpg" style="width:100%">
+              <div class="text">Caption Two</div>
+            </div>
+          
+            <div class="mySlides fade">
+              <div class="numbertext">3 / 3</div>
+              <img src="banner5.jpg" style="width:100%">
+              <div class="text">Caption Three</div>
+            </div>
+          
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          </div>
+          <br>
+          
+          <!-- The dots/circles -->
+          <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+          </div>
+        </table>  
+        <table align="center" border="0" width="100%" bgcolor="white" height="9%">
+            <tr>
+                <td colspan="5"><h2>Todays Deals</h2> </td>
+            </tr>
+            <tr>
+                <th><img src="C:/Users/HP/Desktop/project/bag5.jpg" class ="zoomA"width="100%"></th>
+                <th><img src="C:/Users/HP/Desktop/project/i1.jpg"width="40%" class="zoomA"></th>
+                <th><img src="C:/Users/HP/Desktop/project/i2.png"width="60%" class="zoomA"></th>
+                <th><img src="C:/Users/HP/Desktop/project/i3.jpg"width="30%" class="zoomA"></th>
+                <th><img src="C:/Users/HP/Desktop/project/i4.jpg"width="70%"class="zoomA"></th>
+
+
+            </tr>
+            <tr>
+                <td align ="center">price:<font color="green">600-₹999/-</font></td>
+                <td align="center">price:<font color="green">129.00-₹1,999.00-</font></td>
+                <td align="center">price<font color="green">13,000-₹15,000/-</font></td>
+                <td align="center">price<font color="green">1300-₹100/-</td>
+                <td align="center">price<font color="green">300-₹400/-</td>
+
+            </tr>
+            <br>
+            <table border="0" width="100%" bgcolor="white" height="9%">
+                <tr>
+                    <td colspan="5"><h2>Up to 80% off | Bestselling sarees</h2></td>
+                </tr>
+                <tr>
+                    <th><img src="C:/Users/HP/Desktop/project/saree2.jpg" width="100%"class="zoomA"></th>
+                    <th><img src="C:/Users/HP/Desktop/project/saree3.jpg"width="100%"class="zoomA"></th>
+                    <th><img src="C:/Users/HP/Desktop/project/saree4.jpg"width="80%"class="zoomA"></th>
+                    <th><img src="C:/Users/HP/Desktop/project/saree5.png"width="90%"class="zoomA"></th>
+                    <th><img src="C:/Users/HP/Desktop/project/saree6.jpg"width="90%"class="zoomA"></th>
+                    <th><img src="C:/Users/HP/Desktop/project/saree7.jpg"width="80%"class="zoomA"></th>
+
+                </tr>
+                <tr>
+                    <td align ="center">price:<font color="green">1400-₹999/-</font></td>
+                    <td align="center">price:<font color="green">1200-₹1290-</font></td>
+                    <td align="center">price<font color="green">1300-₹1500/-</font></td>
+                    <td align="center">price<font color="green">1000-₹700/-</td>
+                    <td align="center">price<font color="green">500-₹400/-</td>
+                    <td align="center">price<font color="green">900-₹680/-</td>
+
+                </tr>
+                <br>
+                <img src="C:/Users/HP/Desktop/project/banner7.jpg" width="100%" height="40%">  
+
+                <table border="0" width="100%" bgcolor="white" height="9%">
+                    <tr>
+                        <td colspan="5"><h2>Up to 80% off | Bestselling furnitures</h2></td>
+                    </tr>
+                    <tr>
+                        <th><img src="C:/Users/HP/Desktop/project/fur1.jpg" width="80%"class="zoomA"></th>
+                        <th><img src="C:/Users/HP/Desktop/project/fur3.jpg"width="100%"class="zoomA"></th>
+                        <th><img src="C:/Users/HP/Desktop/project/fur4.jpg"width="100%"class="zoomA"></th>
+                        <th><img src="C:/Users/HP/Desktop/project/fur5.jpg"width="80%"class="zoomA"></th>
+                        <th><img src="C:/Users/HP/Desktop/project/fur6.jpg"width="100%"class="zoomA"></th>
+    
+                    </tr>
+                    <tr>
+                        <td align ="center">price<font color="green">1900-₹2,99/-</font></td>
+                        <td align="center">price:<font color="green">1200-₹3,490-</font></td>
+                        <td align="center">price<font color="green">2300-₹1500/-</font></td>
+                        <td align="center">price<font color="green">1000-₹700/-</font></td>
+                        <td align="center">price<font color="green">5,900-₹900/-</font></td>
+                     </tr>
+                </table>
+                <br>
+                <table border="0" width="100%" bgcolor="white" height="9%">
+                    <tr>
+                        <td colspan="5"><h2>Up to 80% off | Bestselling sarees</h2></td>
+                    </tr>
+                    <tr>
+                        <th><img src="C:/Users/HP/Desktop/project/flower.jpg" width="100%"class="zoomA"></th>
+                        <th><img src="C:/Users/HP/Desktop/project/flower2.jpg"width="100%"class="zoomA"></th>
+                        <th><img src="C:/Users/HP/Desktop/project/flower3.jpg"width="80%"class="zoomA"></th>
+                        <th><img src="C:/Users/HP/Desktop/project/flower4.jpg"width="90%"class="zoomA"></th>    
+                    </tr>
+                    <tr>
+                        <td align ="center">price:<font color="green">1400-₹999/-</font></td>
+                        <td align="center">price:<font color="green">1200-₹1290-</font></td>
+                        <td align="center">price<font color="green">1300-₹1500/-</font></td>
+                        <td align="center">price<font color="green">1000-₹700/-</font></td>
+    
+                    </tr>
+                    <br>
+                    <br>
+                    <br>
+            <table border="0" width="100%", height="100%">
+                <tr>
+                    <td colspan="4 "align="center" bgcolor="#52595D" width="100%"><h3>Back To Top</h3></td>
+                    <tr>
+                    <td bgcolor=" #616D7E" width="25%" ><font color="white">Get To know Us</font>
+                    <ul>
+                        <li>About Us</li>
+                        <li>Careers</li>
+                        <li>Press Releases</li>
+                        <li>Amazon cares</li>
+                        <li>Gifts a Smile</li>
+
+                    </ul>
+                    </td>
+
+                    <td bgcolor=" #616D7E" width="25%"> <font color="white">Conect To Us</font>
+                        <ul>
+                        <li>Facebook</li>
+                        <li>Instagram</li>
+                        <li>Twitter</li>
+                        <li>Linkdin</li>
+                        <li>whatsap</li>    
+    
+                        </ul>
+                    </td>
+                    <td bgcolor=" #616D7E"  width="25%" ><font color="white">Make Money With Us</font>                    
+                        <ul>
+                        <li>Sell on Amazon</li>
+                        <li>Sell under Amazon Accelerator</li>
+                        <li>Amazon Global Selling</li>
+                        <li>Become an Affiliate</li>
+                        <li>Fulfilment by Amazon </li>
+                        </ul>
+                    </td>
+                    <td bgcolor=" #616D7E"  width="25%"><font color="white">Let Us Help You</font>
+                        <ul>
+                            <li>Your Account</li>
+                            <li>Returns Centre</li>
+                            <li>100% Purchase Protection</li>
+                            <li>Amazon App Download</li>
+                            <li>Help</li>
+    
+                        </ul>
+                    </td>
+                </tr>
+            </tr>
+            </table>
+<script>
+ var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
+</body>
+</html>
